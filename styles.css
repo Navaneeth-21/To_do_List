@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#outer_container{
+    border: 1px solid black;
+    width:50%;
+    margin:2% auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* background-color: rgb(60, 59, 59); */
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border: none;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#outer_container h1{
+    margin: 1% auto;
+    text-decoration: underline;
+    font-style: italic;
+    color: rgb(126, 102, 205);
+    /* background-color: rgb(231, 39, 39); */
+}
+#text_input_btn{
+    border: none;
+    outline: none;
+    /* background-color: rgb(192, 68, 68); */
+    width: 100%;
+    /* padding:0% auto; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 2%;
+}
+#inputField{
+    width: 50%;
+    height:32px;
+    padding-left: 1%;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* background-color: aquamarine; */
+    /* color: aliceblue; */
+}
+#text_input_btn button{
+    width:4vw;
+    border: none;
+    outline: none;
+    font-size:20px;
+    /* background-color: rgb(60, 59, 59); */
+    /* background: rgb(238,174,202); */
+/* background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);    */
+    margin-left: 2%;
+    color: #9e07b1;
+    background-color: transparent;
+    cursor: pointer;
+}
+#text_input_btn button:hover{
+    /* background-color: black; */
+    color: #fff;
+}
+/* #items_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+} */
+#tasks-list{
+    display: flex;
+    flex-direction: column;
+    padding: 2% 1%;
+}
+.actions button{
+    padding:0% 20%;
+}
+#items_container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.btn1{
+    display:none;
+}
+.btn2{
+    display:inline;
+}
