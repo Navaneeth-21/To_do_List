@@ -1,20 +1,27 @@
-let addButton = document.getElementById("btn");
-let inputText = document.getElementById("inputField");
-// let tasks_list = document.getElementsByClassName("tasker-body")[0];
-let tasks_list_ul = document.getElementById("tasks")
-let icon_btn = document.getElementsByClassName("btn1")[0];
-addButton.addEventListener("click", function () {
-    Array = []
-    let items;
-    items = document.createElement("li");
-    items.innerText = inputText.value;
-    tasks_list_ul.append(items);
-    for(let i=0;i<tasks_list_ul.length;i++){
-        let trash_btn = <i class="fa-solid fa-trash-can"></i>
-        tasks_list_ul.appendChild(trash_btn);
+document.querySelector('#btn').onclick = function(){
+    if(document.querySelector('#text_input_btn input').value == ""){
+        alert("Please Enter the task !!!")
     }
-    inputText.value = " ";
-    icon_btn.addEventListener("click", function () {
-        tasks_list_ul.remove();
-    })
-})
+    else{
+        document.querySelector('#tasks').innerHTML += `
+            <div id="innertasks">
+                <input type="checkbox" name="text" id="input_check">
+                <span id = "taskname">
+                    ${document.querySelector('#text_input_btn input').value}
+                </span>
+                <button class="delete">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+            </div>  
+            `;
+        document.querySelector('#text_input_btn input').value = ""
+        var current_tasks = document.querySelectorAll('.delete');
+        for(let i=0;i<current_tasks.length;i++){
+            current_tasks[i].onclick = function(){
+                this.parentNode.remove();
+            }
+        }    
+    }
+
+}
+
