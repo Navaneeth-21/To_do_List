@@ -9,16 +9,11 @@ addButton.addEventListener("click", function () {
     items = document.createElement("li");
     items.innerText = inputText.value;
     tasks_list_ul.append(items);
-    // Array.append(items);
     for(let i=0;i<tasks_list_ul.length;i++){
         let trash_btn = <i class="fa-solid fa-trash-can"></i>
         tasks_list_ul.appendChild(trash_btn);
     }
     inputText.value = " ";
-    // var delbtn = document.createElement("Button");
-    // delbtn.innerHTML = `<i class="fa-solid fa-trash-can"></i>`
-    // listItems.appendChild(items);
-    // listItems.classList.add("btn1");
     icon_btn.addEventListener("click", function () {
         tasks_list_ul.remove();
     })
